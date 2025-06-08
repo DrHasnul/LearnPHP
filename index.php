@@ -1,10 +1,8 @@
 <?php
-//Changes ni dari branch baru
+$mysqli = new mysqli("localhost", "root", "", "mydb");
 
-//Tambah lagi comment dalam Main
-
-//Test button Refresh pulak....
-
-
-echo "Hello World!";
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+echo "Connected to MySQL successfully!";
 ?>

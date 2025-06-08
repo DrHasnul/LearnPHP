@@ -1,0 +1,11 @@
+{
+  "name": "PHP + MySQL Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [80, 3306, 8080],
+  "postCreateCommand": "sudo service mysql start && mysql -u root -e 'CREATE DATABASE mydb;'"
+,
+  "features": {},
+  "remoteUser": "vscode"
+}
